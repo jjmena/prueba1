@@ -1,16 +1,24 @@
 package org.jboss.as.quickstarts.kitchensinkrf.controller;
 
+import java.io.Serializable;
+
 import javax.annotation.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.component.UIInput;
 import javax.faces.event.ValueChangeEvent;
 import javax.inject.Named;
 
 @Named
-@ViewScoped
+@SessionScoped
 @ManagedBean(value = "sendBean")
-public class SendBean {
+public class SendBean implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
 	private String inputInm;
 	private String inpuntNoInm;
 
